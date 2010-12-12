@@ -1,6 +1,13 @@
 (ns my-blog.webserver
   (:use [compojure.core]
         [ring.adapter.jetty]
-        [address_book.routes :as routes]))
+        [my-blog.routes :as routes]))
 
- (future (run-jetty index {:port 8080}))
+(defn start
+  "Start Jetty in a background thread.  Note there's currently no
+  way to stop Jetty once you start it."
+  []
+  (future
+   (run-jetty (var post-routes) {:port 8080})))
+
+(start)

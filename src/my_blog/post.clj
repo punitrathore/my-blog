@@ -1,4 +1,5 @@
 (ns my-blog.post
+  (:use clojure.contrib.sql)
   (:require [clj-record.boot]
             [clj-record [query :as query]]
             [my-blog.config :as config])
