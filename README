@@ -1,17 +1,9 @@
 # my-blog
 
-FIXME: write description
-
-## Usage
-
-FIXME: write
-
-## Installation
-
-FIXME: write
+Source code of my blog, which I hope will replace the wordpress blog that I currently have.
 
 ## License
 
-Copyright (C) 2010 FIXME
+Copyright (C) 2010 Punit Rathore
 
 Distributed under the Eclipse Public License, the same as Clojure.
