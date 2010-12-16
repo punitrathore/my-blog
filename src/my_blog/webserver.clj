@@ -9,5 +9,3 @@
   []
   (future
    (run-jetty (var post-routes) {:port 8080})))
-
-(start)
