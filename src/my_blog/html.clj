@@ -20,3 +20,9 @@
              (helpers/form-row "Body" "body" text-area "large-text-area")
              (helpers/submit-row "Create")
              )]))
+
+(defn render-comment [comment]
+  (if comment
+    (html [:div.comment
+           [:div.comment-author (str (:author comment))]
+           [:div.comment-body (str (:body comment))]])))

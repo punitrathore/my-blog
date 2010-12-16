@@ -6,7 +6,8 @@
   (:refer-clojure :exclude (find create)))
 
 (def db (config/*MY-BLOG-DB* :development))
-(clj-record.core/init-model)
+(clj-record.core/init-model
+ (:associations (has-many comments)))
 
 (defn find-all-posts []
   (find-records {:id (query/greater-than 0)}))
