@@ -1,7 +1,5 @@
 (ns my-blog.layout
-;;  (:use hiccup.core)
-;;  (:use hiccup.form-helpers)
-    (:use (hiccup [core :only [html escape-html]]
+  (:use (hiccup [core :only [html escape-html]]
                 [page-helpers :only [link-to]]
                 [form-helpers :only [form-to text-field text-area hidden-field]])))
 
