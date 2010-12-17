@@ -15,7 +15,8 @@
 (defroutes post-routes
   (GET "/posts" [] (views/index-page))
   (GET "/posts/new" [] (views/new-post-page))
-  (GET "/posts/:id" [id] (layout/wrap-with-layout (html/render-post (post/find-post id))))
+  (GET "/posts/:id" [id] (layout/wrap-with-layout (html/render-full-post (post/find-post id))))
   (POST "/posts" {params :params} (views/create-new-post params))
+  (POST "/comments" {params :params} (views/create-new-comment params))
   (route/files "/" {:root "public"})
   (route/not-found "Page not found"))

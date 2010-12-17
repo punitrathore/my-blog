@@ -8,3 +8,8 @@
 (clj-record.core/init-model
  (:associations (belongs-to post)))
 
+(defn create-comment [attributes]
+  (create attributes))
+
+(defn find-id [id]
+  (find-record {:id id}))

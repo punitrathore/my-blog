@@ -11,3 +11,6 @@
 (defn submit-row [submit_label]
   [:div.submit
    (submit-button submit_label )])
+
+(defn posts-path [post]
+  (str "/posts/" (:id post)))
