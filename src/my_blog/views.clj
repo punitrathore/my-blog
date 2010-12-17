@@ -4,7 +4,8 @@
             [my-blog.layout :as layout]
             [my-blog.html :as html]
             [my-blog.comment :as c]
-            [ring.util [response :as response]]))
+            [ring.util [response :as response]]
+            [my-blog.helpers :as helpers]))
 
 
 (defn index-page []
@@ -14,8 +15,9 @@
   (layout/wrap-with-layout (html/new-post-form)))
 
 (defn create-new-post [attrs]
-  (layout/wrap-with-layout (html/render-post (p/create-post attrs))))
+  (let [post (p/create-post attrs)]
+  (response/redirect (helpers/posts-path post))))
 
 (defn create-new-comment [attrs]    
   (let [comment (c/create-comment attrs) post (c/find-post comment)]  
-    (response/redirect (str "/posts/" (:id post)))))
+    (response/redirect (helpers/posts-path post))))
