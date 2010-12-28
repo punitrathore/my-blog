@@ -22,11 +22,11 @@
      [:div#doc4.yui-t4
       [:div#bd
        
-       [:div#main-page.yui-gf
-        [:div#content-container.yui-u        
+       [:div#main-page.yui-ge
+        [:div#content-container.yui-u.first
         [:div#content
          page-html]]
-       [:div#sidebar.yui-u.first
+       [:div#sidebar.yui-u
         "Sidebar"]]]
       ]
      ]]))
